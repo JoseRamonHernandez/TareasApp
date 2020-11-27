@@ -11,6 +11,14 @@ export class TareasService{
 
 
     constructor() {
-        console.log('Servicio inicializado');
+        
+        
+        const lista1 = new Lista('Recolectar cosas');
+        const lista2 = new Lista('Ya fue hom´s');
+
+
+        this.listas.push(lista1, lista2);
+
+        
      }
 }
