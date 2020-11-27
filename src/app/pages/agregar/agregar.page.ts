@@ -47,5 +47,8 @@ export class AgregarPage implements OnInit {
     //console.log(this.tareasService.listas)
   }
 
- 
+  borrar(i: number) {
+    this.lista.items.splice(i, 1);
+    this.tareasService.guardarStorage;
+  }
 }
