@@ -21,13 +21,13 @@
     </ion-list>
 
     <ion-list class="ionlist">
-        <ion-list-header color="danger">
+        <ion-list-header color="danger" *ngIf="lista.items.length > 0">
             <ion-label>
                 Tareas por hacer
             </ion-label>
         </ion-list-header>
 
-        <ion-item-sliding *ngFor="let item of lista.items" class="animated fadeInDown; let i = index">
+        <ion-item-sliding *ngFor="let item of lista.items;  let i = index" class="animated fadeInDown">
 
             <ion-item color="dark">
                 <ion-checkbox slot="start" color="tertiary" [(ngModel)]="item.completado" (ionChange)="cambioCheck(item)"></ion-checkbox>

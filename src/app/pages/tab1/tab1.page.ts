@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AlertController, IonButtons } from '@ionic/angular';
 import { TareasService } from '../../services/tareas.service';
 import { AgregarPage } from '../agregar/agregar.page';
+import { Lista } from '../../models/lista.model';
 
 @Component({
   selector: 'app-tab1',
@@ -60,6 +61,11 @@ const listaId = this.tareasService.crearLista(data.titulo)
 
 }
 
+
+listaSeleccionada(lista: Lista){
+  this.router.navigateByUrl(`/tabs/tab1/agregar/ ${ lista.id }`);
+ 
+}
 
 }
 
