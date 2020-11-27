@@ -14,14 +14,14 @@ export class ListasComponent implements OnInit {
   @ViewChild(IonList) lista: IonList;
   @Input() terminada = true;
 
-  constructor(public deseosService: TareasService,
+  constructor(public tareasService: TareasService,
     private router: Router,
     private alertController: AlertController) { }
 
   ngOnInit() { }
 
   listaSeleccionada(lista: Lista) {
-    console.log(lista);
+    //console.log(lista);
     if (this.terminada) {
       this.router.navigateByUrl(`/tabs/tab2/agregar/${lista.id}`);
     } else {
@@ -54,7 +54,7 @@ export class ListasComponent implements OnInit {
             return;
           }
           lista.titulo = data.titulo;
-          this.deseosService.guardarStorage();
+          this.tareasService.guardarStorage();
           this.lista.closeSlidingItems();
         }
       }
@@ -63,7 +63,5 @@ export class ListasComponent implements OnInit {
     alert.present();
   }
 
-  borrarLista(lista: Lista) {
-    this.deseosService.borrarLista(lista);
-  }
+  
 }
