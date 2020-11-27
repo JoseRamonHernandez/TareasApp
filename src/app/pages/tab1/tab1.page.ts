@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TareasService } from '../../services/tareas.service';
+import { AgregarPage } from '../agregar/agregar.page';
 
 @Component({
   selector: 'app-tab1',
@@ -8,8 +10,13 @@ import { TareasService } from '../../services/tareas.service';
 })
 export class Tab1Page {
 
-  constructor(public tareasService: TareasService ) {
+  constructor(public tareasService: TareasService,
+                    private router: Router ) {
     
   }
+agregarLista(){
+  this.router.navigateByUrl('/tabs/tab1/agregar');
+}
+
 
 }
