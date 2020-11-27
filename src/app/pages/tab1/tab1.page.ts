@@ -28,26 +28,27 @@ async agregarLista(){
     placeholder: 'Titulo de la tarea'
   }], 
   buttons: [
+    
     {
-      text: 'Crear',
-      handler: (data) =>{
-        console.log(data);
-        if(data.titulo.length === 0){
-          return;
-        }
+    text: 'Cancelar',
+    role: 'cancel',
+    handler: () =>{
+      console.log('Cancelar');
+    }
+  },
+  {
+    text: 'Crear',
+    handler: (data) =>{
+      console.log(data);
+      if(data.titulo.length === 0){
+        return;
+      }
 
 this.tareasService.crearLista(data.titulo)
 
 //crear la lista
 
 
-      }
-    },
-    {
-    text: 'Cancelar',
-    role: 'cancel',
-    handler: () =>{
-      console.log('Cancelar');
     }
   }
  
