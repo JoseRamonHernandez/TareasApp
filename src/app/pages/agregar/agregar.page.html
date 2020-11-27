@@ -1,11 +1,38 @@
-<ion-header>
-    <ion-toolbar>
+<ion-header class="ion-no-border">
+    <ion-toolbar color="primary">
+
+        <ion-buttons slot="end">
+            <ion-back-button color="dark" defaultHref="/">Regresar</ion-back-button>
+        </ion-buttons>
+
         <ion-title>
             Agregar Tarea
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <h1>Agregar Tarea</h1>
+<ion-content color="dark">
+
+    <ion-list color="dark" class="ionlist">
+        <ion-item color="dark" class="ionlist">
+            <ion-label position="floating">Tarea Nueva...</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <ion-list class="ionlist">
+        <ion-list-header color="danger">
+            <ion-label>
+                Tareas por hacer
+            </ion-label>
+        </ion-list-header>
+
+        <ion-item color="dark">
+            <ion-checkbox slot="start" color="tertiary"></ion-checkbox>
+            <ion-label>RRRRRRrr</ion-label>
+        </ion-item>
+
+    </ion-list>
+
+
 </ion-content>
