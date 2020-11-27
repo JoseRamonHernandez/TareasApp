@@ -63,5 +63,7 @@ export class ListasComponent implements OnInit {
     alert.present();
   }
 
-  
+  borrarLista(lista: Lista) {
+    this.tareasService.borrarLista(lista);
+  }
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Lista } from '../models/lista.model';
+import { ListasComponent } from '../components/listas/listas.component';
 
 @Injectable({
     providedIn: 'root'
@@ -29,6 +30,14 @@ crearLista(titulo: string){
     this.guardarStorage();
 
     return nuevaLista.id;
+}
+
+borrarLista(lista: Lista){
+  this.listas =  this.listas.filter( listaData =>{
+        return listaData.id !== lista.id
+    });  
+
+    this.guardarStorage();
 }
 
 obtenerLista(id: string | number){
